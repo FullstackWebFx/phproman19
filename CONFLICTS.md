@@ -41,3 +41,10 @@ This document explains why certain conflicts were added to `composer.json` and r
 
   This version introduces a change in method signature that is not compatible with API Platform 2.7 and leads to a fatal error:
   `PHP Fatal error:  Declaration of ApiPlatform\Serializer\AbstractItemNormalizer::getAllowedAttributes($classOrObject, array $context, $attributesAsString = false) must be compatible with Symfony\Component\Serializer\Normalizer\AbstractObjectNormalizer::getAllowedAttributes(object|string $classOrObject, array $context, bool $attributesAsString = false): array|bool in /home/runner/work/Sylius/Sylius/vendor/api-platform/core/src/Serializer/AbstractItemNormalizer.php on line 493`
+
+- `doctrine/orm:2.20.7`:
+
+  These versions contain a regression that breaks queries with empty arrays, causing SQL syntax errors when methods like `EntityRepository::findById([])` are called with an empty array.
+  This leads to invalid SQL queries like `WHERE t0.id IN ()`.
+
+  References: https://github.com/doctrine/orm/issues/12245
