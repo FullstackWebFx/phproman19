@@ -71,7 +71,7 @@ Or search for [packages marked as *sylius-plugin*](https://packagist.org/explore
 Sylius is completely free and released under the [MIT License](https://github.com/Sylius/Sylius/blob/master/LICENSE).
 
 ✍️ Authors
----------
+----------
 
 Sylius was originally created by [Paweł Jędrzejewski](https://pjedrzejewski.com).
 
